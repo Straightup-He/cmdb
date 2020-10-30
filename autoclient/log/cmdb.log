@@ -1,0 +1,114 @@
+2020-10-03 14:16:15,846 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\disk.py", line 19, in process
+    result = int('asdf')
+ValueError: invalid literal for int() with base 10: 'asdf'
+
+2020-10-03 14:52:35,340 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\disk.py", line 20, in process
+    result.data = int('出错了')
+ValueError: invalid literal for int() with base 10: '出错了'
+
+2020-10-03 17:50:31,000 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\network.py", line 21, in process
+    cmd1 = ssh('sudo ip link show', host)
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\harris\anaconda3\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+2020-10-03 17:51:54,227 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\network.py", line 21, in process
+    cmd1 = ssh('sudo ip link show', host)
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\harris\anaconda3\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+2020-10-04 11:04:10,984 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\memory.py", line 20, in process
+    result = ssh(host, 'dmidecode  -q -t 17 2>/dev/null')
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\anaconda3\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+2020-10-07 14:46:19,333 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\memory.py", line 20, in process
+    result = ssh(host, 'dmidecode  -q -t 17 2>/dev/null')
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+2020-10-07 14:46:40,384 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\network.py", line 21, in process
+    cmd1 = ssh(host, 'sudo ip link show')
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+2020-10-07 14:50:38,633 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\memory.py", line 20, in process
+    result = ssh(host, 'dmidecode  -q -t 17 2>/dev/null')
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+2020-10-07 14:50:59,662 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\network.py", line 21, in process
+    cmd1 = ssh(host, 'sudo ip link show')
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+2020-10-07 14:51:20,680 - cmdb - ERROR -log:  Traceback (most recent call last):
+  File "C:\Users\harris\AppData\Local\Programs\cmdb\autoclient\lib\plugins\basic.py", line 20, in process
+    uname = ssh(host, 'uname').strip()
+  File "C:/Users/harris/AppData/Local/Programs/cmdb/autoclient/app.py", line 18, in ssh
+    my_ssh.connect(hostname=host, port=settings.SSH_PORT, username=settings.SSH_USER, password=settings.SSH_PWD)
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\util.py", line 283, in retry_on_signal
+    return function()
+  File "C:\Users\harris\AppData\Local\Programs\FlaskAI\lib\site-packages\paramiko\client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+

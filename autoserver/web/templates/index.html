@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管控平台</title>
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-2" style="margin-top: 15px;margin-bottom: 10px;">
+        <a href="{% url 'create_server' %}" class="btn btn-primary">新增服务器</a>
+    </div>
+    <div class="row col-md-1" style="margin-top: 15px;margin-bottom: 10px;">
+        <a href="{% url 'pie' %}" class="btn btn-success">资源占比</a>
+    </div>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>主机名</th>
+                <th>业务线</th>
+                <th>IDC</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for server in server_list %}
+                <tr>
+                    <td>{{ server.hostname }}</td>
+                    <td>{{ server.business_unit.name }}</td>
+                    <td>{{ server.idc.name }}({{ server.idc.floor }}层)</td>
+                    <td>{{ server.get_status_display }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
